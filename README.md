@@ -46,6 +46,9 @@ function sendTelegramRequest($method, $params = []){
     return json_decode(file_get_contents($url), JSON_OBJECT_AS_ARRAY);
 }
 
+// getting an update
+$update = json_decode(file_get_contents('php://input'), JSON_OBJECT_AS_ARRAY);
+
 // logging into log.txt everything what telegram API is sending to us
 file_put_contents(__DIR__ . '/log.txt', file_get_contents('php://input'), FILE_APPEND);
 
