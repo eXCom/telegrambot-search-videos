@@ -60,3 +60,5 @@ $text = 'Hello new telegram bot developer!';
 // giving an answer
 sendTelegramRequest('sendMessage', ['chat_id' => $update['message']['chat']['id'], 'text' => $text]);
 ```
+7. Now start the conversation with your bot and send him a message, it must answer you with 
+a message `Hello new telegram bot developer!`
