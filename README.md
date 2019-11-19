@@ -3,7 +3,7 @@
 
 1. Prepare a website with SSL sertificate, you should be able to access your website with HTTPS protocol, for example `https://sitename.com`
 2. Create a bot itself using the botfather bot in telegram [@BotFather](https://t.me/botfather)
-3. Create a new file on your website with a name setwebhook.php (name really doesnt matter) with this code:
+3. Create a new file on your website with a name **setwebhook.php** (name really doesnt matter) with this code:
 ```<?php
 
 const TOKEN    = "714102384:AAGMXOM-GKe1UUuQ0Y4CVJ0JyV3MdYLgceg";
@@ -18,4 +18,5 @@ $options = [
 $response = file_get_contents($url . '?' . http_build_query($options));
 
 var_dump($response);```
+
 4. 
