@@ -51,7 +51,11 @@ foreach($videoListResponse['items'] as $video) {
     $video_list[] = 'https://www.youtube.com/watch?v=' . $video['id']['videoId'];
 }
 
-$text = implode(' ', $video_list);
+if(count($video_list)) {
+    $text = implode(' ', $video_list);
+} else {
+    $text = 'No videos found.';
+}
 
 // giving an answer
 sendTelegramRequest('sendMessage', ['chat_id' => $update['message']['chat']['id'], 'text' => $text]);
