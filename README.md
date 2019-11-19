@@ -19,7 +19,8 @@ $response = file_get_contents($url . '?' . http_build_query($options));
 
 var_dump($response);```
 
-4. Now access your file by visiting it in your browser, this will set the webhook for your bot to send messages to your server, for example:
+4. Now access your file by visiting it in your browser, this will set the webhook for your bot to send messages to your server, 
+for example:
 `https://sitename.com/setwebhook.php`
 If you see this response than everything works
 ```
