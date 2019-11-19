@@ -26,7 +26,7 @@ send messages to your server, for example:
 `https://sitename.com/setwebhook.php`
 If you see this response then everything works
 ```
-string '{"ok":true,"result":true,"description":"Webhook is already set"}' (length=64)
+string(57) "{"ok":true,"result":true,"description":"Webhook was set"}" 
 ```
 5. Now its time to create bot main `telegram-bot.php` file
 
