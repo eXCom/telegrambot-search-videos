@@ -36,9 +36,6 @@ string(57) "{"ok":true,"result":true,"description":"Webhook was set"}"
 const TELEGRAM_TOKEN    = "YOUR_TELEGRAM_TOKEN";
 const TELEGRAM_BASE_URL = "https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/";
 
-const UTUBE_TOKEN       = "YOUR_UTUBE_TOKEN";
-const UTUBE_BASE_URL    = "https://www.googleapis.com/youtube/v3/search";
-
 function sendTelegramRequest($method, $params = []){
     if (!empty($params)) {
         $url = TELEGRAM_BASE_URL . $method . '?' . http_build_query($params);
