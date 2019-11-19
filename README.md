@@ -4,9 +4,7 @@
 1. Prepare a website with SSL sertificate, you should be able to access your website with HTTPS protocol, for example `https://sitename.com`
 2. Create a bot itself using the botfather bot in telegram [@BotFather](https://t.me/botfather)
 you must have its TOKEN, save it for later use
-3. Enable utube API in your google account and get the key by using this 
-[instructions](https://www.slickremix.com/docs/get-api-key-for-youtube/)
-4. Create a new file on your website with a name **setwebhook.php** (name really doesnt matter) with this code:
+3. Create a new file on your website with a name **setwebhook.php** (name really doesnt matter) with this code:
 ```<?php
 
 const TOKEN    = "YOUR_TELEGRAM_BOT_TOKEN";
@@ -23,14 +21,14 @@ $response = file_get_contents($url . '?' . http_build_query($options));
 var_dump($response);
 ```
 
-5. Now access your file by visiting it in your browser, this will set the webhook for your bot to
+4. Now access your file by visiting it in your browser, this will set the webhook for your bot to
 send messages to your server, for example:
 `https://sitename.com/setwebhook.php`
 If you see this response then everything works
 ```
 string '{"ok":true,"result":true,"description":"Webhook is already set"}' (length=64)
 ```
-6. Now its time to create bot main `telegram-bot.php` file
+5. Now its time to create bot main `telegram-bot.php` file
 
 ```
 <?php
@@ -60,5 +58,5 @@ $text = 'Hello new telegram bot developer!';
 // giving an answer
 sendTelegramRequest('sendMessage', ['chat_id' => $update['message']['chat']['id'], 'text' => $text]);
 ```
-7. Now start the conversation with your bot and send him a message, it must answer you with 
+6. Now start the conversation with your bot and send him a message, it must answer you with 
 a message `Hello new telegram bot developer!`
