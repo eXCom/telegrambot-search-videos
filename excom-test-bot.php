@@ -31,7 +31,7 @@ function sendTelegramRequest($method, $params = []){
 $update = json_decode(file_get_contents('php://input'), JSON_OBJECT_AS_ARRAY);
 
 $logRecord = date('Y:m:d H:i:s') . ' First Name: ' . $update['message']['from']['first_name']
-    . ' Username: ' . $update['message']['from']['username'] . ' Text: ' . $update['message']['text'];
+    . ' Username: ' . $update['message']['from']['username'] . ' Text: ' . $update['message']['text'] . "\r\n";
 
 // logging into log.txt
 file_put_contents(__DIR__ . '/log.txt', $logRecord, FILE_APPEND);
