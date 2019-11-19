@@ -22,7 +22,9 @@ var_dump($response);```
 4. Now access your file by visiting it in your browser, this will set the webhook for your bot to
 send messages to your server, for example:
 `https://sitename.com/setwebhook.php`
-If you see this response than everything works
+If you see this response then everything works
 ```
 string '{"ok":true,"result":true,"description":"Webhook is already set"}' (length=64)
 ```
+5. Now its time to create bot main `telegram-bot.php` file
+
