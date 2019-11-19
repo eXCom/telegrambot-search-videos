@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 const TELEGRAM_TOKEN    = "714102384:AAGMXOM-GKe1UUuQ0Y4CVJ0JyV3MdYLgceg";
 const TELEGRAM_BASE_URL = "https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/";
@@ -30,8 +30,11 @@ function sendTelegramRequest($method, $params = []){
 // getting an update
 $update = json_decode(file_get_contents('php://input'), JSON_OBJECT_AS_ARRAY);
 
+$logRecord = date('Y:m:d H:i:s') . ' First Name: ' . $update['message']['from']['first_name']
+    . ' Username: ' . $update['message']['from']['username'] . ' Text: ' . $update['message']['text'];
+
 // logging into log.txt
-file_put_contents(__DIR__ . '/log.txt', file_get_contents('php://input'), FILE_APPEND);
+file_put_contents(__DIR__ . '/log.txt', $logRecord, FILE_APPEND);
 
 $utube_params = [
     'key'        => UTUBE_TOKEN,
